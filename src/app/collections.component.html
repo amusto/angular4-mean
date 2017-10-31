@@ -1,0 +1,91 @@
+<div class=".container-fluid">
+  <!-- Content here -->
+
+  <div class="row" style="margin-top: 10px;">
+    <div class="col-sm-6">
+      <h2>Movie Collections</h2>
+    </div>
+    <div class="col-sm-6 text-right align-bottom">
+      <!--button class="btn btn-lg btn-outline-primary" (click)="open()">Add Collection</button-->
+
+      <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+    </div>
+
+    <hr>
+
+    <pre>{{closeResult}}</pre>
+  </div>
+
+  <!--div class="row" ng-show="!showHideAddCollection">
+    <div class="col-sm col-md">
+
+      <table class="table table-hover table-striped table-bordered">
+        <thead>
+        <tr>
+          <th>Collection</th>
+          <th class="d-none d-md-block">Created</th>
+          <th>#Movies</th>
+          <th width="100" align="center"></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr ng-repeat="collection in movieCollections">
+          <td><a ui-sref="editCollection({ collectionID: collection._id })">{{ collection.name }}</a></td>
+          <td class="d-none d-md-block">{{ collection.created_at | date:medium }}</td>
+          <td>{{ collection.movies.length }}</td>
+          <td nowrap align="center"><a href="" ng-click="deleteCollection(collection._id)">
+            <img class="glyph-icon" src="/assets/img/svg/si-glyph-trash.svg"/>
+          </a></td>
+        </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div-->
+
+  <!--div class="row" ng-show="showHideAddCollection">
+    <div class="col-sm col-md">
+
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCollectionName" class="col-form-label">Collection Name</label>
+            <input type="text" class="form-control" id="inputCollectionName" placeholder="Collection Name" ng-model="addCollection.collectionName">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputCollectionGenre">Genre</label>
+            <select class="form-control" id="inputCollectionGenre" ng-model="addCollection.genre">
+              <option value="0">Select a Genre</option>
+              <option ng-repeat="option in collectionGenres">{{option}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          Add type-ahead to search for movies for collection<br>
+          List out movies in collection
+        </div>
+        <button type="submit" class="btn btn-primary">Create Collection</button>
+      </form>
+
+    </div>
+  </div-->
+
+</div>
+
+<!--ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template-->

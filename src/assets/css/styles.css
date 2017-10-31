@@ -1,0 +1,19 @@
+/* General Styles for site */
+.glyph-icon {
+    width:18px;
+    height:16px;
+}
+
+body {
+  padding-top: 54px;
+}
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}

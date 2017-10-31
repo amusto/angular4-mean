@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <h4 class="modal-title">Add a Collection</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>{{headerText}}</p>
+  <form>
+    <div class="form-group">
+      <label for="formCollectionName">Name</label>
+      <input style="width:100%" type="text" id="formCollectionName" name="formCollectionName" [(ngModel)]="newCollection.name" #ctrl="ngModel" placeholder="My favorite movies" required autofocus>
+    </div>
+  </form>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="addCollection(newCollection)">Save Collection</button>
+</div>
